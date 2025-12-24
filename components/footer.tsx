@@ -20,12 +20,12 @@ export function Footer() {
   return (
     <footer
       id="contato"
-      className="py-16 bg-background border-t border-border mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8"
+      className="bg-background border-t border-border mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8 py-16 sm:py-20 xl:py-24"
     >
       <div className="grid md:grid-cols-5 gap-8 mb-12">
         <div className="md:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-4">
-            <div className="relative w-10 h-10">
+            <div className="relative w-10 h-10 shrink-0">
               <Image
                 src="/brand.png"
                 alt="Logo"

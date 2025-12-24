@@ -21,7 +21,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="flex items-center justify-between h-16 mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8">
         <Link href="/" className="flex items-center">
-          <div className="relative w-10 h-10">
+          <div className="relative w-10 h-10 shrink-0">
             <Image
               src="/brand.png"
               alt="Logo"
