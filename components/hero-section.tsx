@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8 py-16 sm:py-20 xl:py-24">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -23,7 +23,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground leading-tight mb-6 text-balance">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground leading-20 mb-6 text-balance">
             SINTA A<span className="text-primary"> ADRENALINA</span>
             <br />
             DA CORRIDA
