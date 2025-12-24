@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter,  Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,8 +16,11 @@ export const metadata: Metadata = {
   title: "Runner Shoot - Plataforma de Corridas de Rua",
   description:
     "A plataforma completa para gerenciar corridas de rua, maratonas, inscrições e produtos esportivos. Sinta a adrenalina!",
-  generator: "v0.app",
-  icons: {
+  openGraph: {
+    locale: "pt_BR",
+    type: "website",
+  },
+  /* icons: {
     icon: [
       {
         url: "/icon-light-32x32.png",
@@ -33,8 +36,8 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/apple-icon.png",
-  },
-}
+  }, */
+};
 
 export default function RootLayout({
   children,
@@ -43,9 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${inter.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
