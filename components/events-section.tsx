@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin } from "lucide-react";
 
 const events = [
   {
@@ -31,14 +31,16 @@ const events = [
     status: "Em Breve",
     color: "from-slate-500/40",
   },
-]
+];
 
 export function EventsSection() {
   return (
-    <section id="eventos" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="eventos" className="bg-background">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8 py-16 sm:py-20 xl:py-24">
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground">PRÓXIMOS EVENTOS</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-foreground">
+            PRÓXIMOS EVENTOS
+          </h2>
           <Button variant="link" className="text-accent hover:text-accent/80">
             Ver Todos →
           </Button>
@@ -57,8 +59,12 @@ export function EventsSection() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${event.color} to-transparent`} />
-                <Badge className="absolute top-4 left-4 bg-card/90 text-foreground border-0">{event.status}</Badge>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${event.color} to-transparent`}
+                />
+                <Badge className="absolute top-4 left-4 bg-card/90 text-foreground border-0">
+                  {event.status}
+                </Badge>
               </div>
 
               <div className="p-6">
@@ -66,16 +72,25 @@ export function EventsSection() {
                   <Calendar className="w-4 h-4" />
                   {event.date}
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-1">{event.title}</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-1">
+                  {event.title}
+                </h3>
                 <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
                   <MapPin className="w-4 h-4" />
                   {event.venue}
                 </div>
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex-1 border-border text-foreground bg-transparent">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 border-border text-foreground bg-transparent"
+                  >
                     Ver Detalhes
                   </Button>
-                  <Button size="sm" className="flex-1 bg-primary text-primary-foreground">
+                  <Button
+                    size="sm"
+                    className="flex-1 bg-primary text-primary-foreground"
+                  >
                     Inscrever-se
                   </Button>
                 </div>
@@ -85,5 +100,5 @@ export function EventsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

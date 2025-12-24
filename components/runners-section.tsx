@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const runners = [
   {
@@ -33,14 +33,16 @@ const runners = [
     image: "/male-ultramarathon-runner-portrait.jpg",
     flag: "🇧🇷",
   },
-]
+];
 
 export function RunnersSection() {
   return (
-    <section id="atletas" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="atletas" className="bg-background">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8 py-16 sm:py-20 xl:py-24">
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground">NOSSOS ATLETAS</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-foreground">
+            NOSSOS ATLETAS
+          </h2>
           <Button variant="link" className="text-accent hover:text-accent/80">
             Ver Todos →
           </Button>
@@ -66,7 +68,9 @@ export function RunnersSection() {
                   {runner.category}
                 </Badge>
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-foreground text-sm">{runner.name}</span>
+                  <span className="font-bold text-foreground text-sm">
+                    {runner.name}
+                  </span>
                   <span>{runner.flag}</span>
                 </div>
               </div>
@@ -75,5 +79,5 @@ export function RunnersSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ShoppingCart } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ShoppingCart } from "lucide-react";
 
 const products = [
   {
@@ -28,14 +28,16 @@ const products = [
     image: "/compression-running-socks.jpg",
     badge: "Novo",
   },
-]
+];
 
 export function ShopSection() {
   return (
-    <section id="loja" className="py-20 bg-card">
-      <div className="container mx-auto px-4">
+    <section id="loja" className="bg-card">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-16 xl:px-8 py-16 sm:py-20 xl:py-24">
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground">LOJA OFICIAL</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-foreground">
+            LOJA OFICIAL
+          </h2>
           <Button variant="link" className="text-accent hover:text-accent/80">
             Ver Tudo →
           </Button>
@@ -61,10 +63,16 @@ export function ShopSection() {
                 )}
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-foreground mb-1">{product.name}</h3>
+                <h3 className="font-bold text-foreground mb-1">
+                  {product.name}
+                </h3>
                 <div className="flex items-center justify-between">
                   <span className="text-accent font-bold">{product.price}</span>
-                  <Button size="icon" variant="ghost" className="text-foreground hover:bg-secondary">
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="text-foreground hover:bg-secondary"
+                  >
                     <ShoppingCart className="w-4 h-4" />
                   </Button>
                 </div>
@@ -74,5 +82,5 @@ export function ShopSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
